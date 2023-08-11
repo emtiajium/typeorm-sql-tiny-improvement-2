@@ -1,8 +1,8 @@
 version: '3.7'
 services:
-    typeorm-sql-tiny-improvement-2-database:
+    query-comparison-database:
         image: postgres:11
-        container_name: typeorm-sql-tiny-improvement-2-postgres
+        container_name: query-comparison-postgres
         restart: always
         ports:
             - '5442:5432'
@@ -15,10 +15,10 @@ services:
         environment:
             POSTGRES_PASSWORD: 123
             POSTGRES_USER: postgres
-            POSTGRES_DB: typeorm-sql-tiny-improvement-2
+            POSTGRES_DB: query-comparison
         volumes:
-            - 'typeorm-sql-tiny-improvement-2-postgres-data:/var/lib/postgresql/data'
+            - 'query-comparison-postgres-data:/var/lib/postgresql/data'
 
 volumes:
-    typeorm-sql-tiny-improvement-2-postgres-data:
+    query-comparison-postgres-data:
         driver: local

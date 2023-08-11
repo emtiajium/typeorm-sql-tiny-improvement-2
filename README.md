@@ -1,4 +1,4 @@
-[![CI](https://github.com/emtiajium/typeorm-sql-tiny-improvement-2/actions/workflows/ci.yml/badge.svg)](https://github.com/emtiajium/typeorm-sql-tiny-improvement-2/actions/workflows/ci.yml)
+[![CI](https://github.com/emtiajium/query-comparison/actions/workflows/ci.yml/badge.svg)](https://github.com/emtiajium/query-comparison/actions/workflows/ci.yml)
 
 # What is this repository for?
 
@@ -14,9 +14,9 @@ TO BE ADDED
 
 ###### Clone the repo and install all dependencies
 
-➜ `git clone git@github.com:emtiajium/typeorm-sql-tiny-improvement-2.git`
+➜ `git clone git@github.com:emtiajium/query-comparison.git`
 
-➜ `cd typeorm-sql-tiny-improvement-2`
+➜ `cd query-comparison`
 
 ➜ `npm install`
 
