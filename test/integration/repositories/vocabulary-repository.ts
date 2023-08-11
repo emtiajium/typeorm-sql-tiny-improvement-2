@@ -15,7 +15,7 @@ describe('Vocabulary Repository', () => {
         await app.close();
     });
 
-    it.skip('SHOULD return vocabs', async () => {
+    it('SHOULD return vocabs', async () => {
         // Act
         const queryResult = await app
             .get(VocabularyRepository)
