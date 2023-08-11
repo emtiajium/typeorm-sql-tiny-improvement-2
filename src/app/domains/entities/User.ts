@@ -7,7 +7,7 @@ export class User {
     id: string;
 
     @Column({ type: 'varchar', nullable: false, unique: true })
-    name: string;
+    email: string;
 
     @OneToMany(() => Vocabulary, (vocabulary) => vocabulary.user, { eager: false, cascade: false })
     vocabularies: Vocabulary[];
