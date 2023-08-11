@@ -45,7 +45,7 @@ jobs:
         run: npm run migration:run
 
       - name: Insert data
-        run: bash scripts/db-restore.bash
+        run: ls && bash scripts/db-restore.bash
 
       - name: Automated Test
         run: npm run test
