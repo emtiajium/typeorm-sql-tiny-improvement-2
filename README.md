@@ -32,6 +32,10 @@ TO BE ADDED
 
 ➜ `npm run migration:run`
 
+###### Insert data
+
+➜ Execute `sql-snippets/bootstrap.sql`
+
 ###### Run the tests
 
 ➜ `npm run test`
@@ -43,6 +47,7 @@ TO BE ADDED
 ## Generate new migration script after changing the entity class(es)
 
 ➜ `npm run migration:generate migrations/<file-name>`
+
 
 ## Change Logs
 
