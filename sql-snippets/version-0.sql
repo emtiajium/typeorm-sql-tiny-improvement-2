@@ -1,4 +1,4 @@
--- TypeORM generate 3 queries when getManyAndCount() gets executed
+-- TypeORM generates 3 queries when getManyAndCount() gets executed
 
 -- query 1
 SELECT DISTINCT "distinctAlias"."vocabulary_id" AS "ids_vocabulary_id", "distinctAlias"."vocabulary_word"
