@@ -34,7 +34,7 @@ TO BE ADDED
 
 ###### Insert data
 
-➜ `bash scripts/db-dump.bash`
+➜ `bash scripts/db-restore.bash`
 
 ###### Run the tests
 
