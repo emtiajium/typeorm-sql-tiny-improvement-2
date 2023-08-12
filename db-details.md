@@ -14,7 +14,7 @@
 | ------ | ----------------- | -------- | ------------------ |
 | id     | uuid              | not null | uuid_generate_v4() |
 | word   | character varying | not null |                    |
-| userId | uuid              |          |                    |
+| userId | uuid              | not null |                    |
 ```
 
 ## Definition
