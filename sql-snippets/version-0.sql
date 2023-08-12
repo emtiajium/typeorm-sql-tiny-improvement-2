@@ -1,6 +1,6 @@
 -- TypeORM generates 3 queries when getManyAndCount() gets executed
 
--- query 1
+-- TypeORM query 1
 SELECT DISTINCT "distinctAlias"."vocabulary_id" AS "ids_vocabulary_id", "distinctAlias"."vocabulary_word"
 FROM (SELECT "vocabulary"."id"      AS "vocabulary_id",
              "vocabulary"."word"    AS "vocabulary_word",
@@ -14,7 +14,7 @@ LIMIT 20 OFFSET 4980;
 
 -- [].map(_ => `'${_}'`).join(', ');
 
--- query 2
+-- TypeORM query 2
 SELECT "vocabulary"."id"      AS "vocabulary_id",
        "vocabulary"."word"    AS "vocabulary_word",
        "definition"."id"      AS "definition_id",
@@ -36,7 +36,7 @@ WHERE ("vocabulary"."userId" = '41f89c90-7029-46a4-8211-5f8c6e527a2d')
         'b44b3033-1b54-4d3f-93a0-c73477dddf68'))
 ORDER BY "vocabulary_word" DESC;
 
--- query 3
+-- TypeORM query 3
 SELECT COUNT(DISTINCT ("vocabulary"."id")) AS "cnt"
 FROM "Vocabulary" "vocabulary"
          LEFT JOIN "Definition" "definition" ON "definition"."vocabularyId" = "vocabulary"."id"
