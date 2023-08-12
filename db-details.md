@@ -43,8 +43,8 @@
 ## Foreign Key
 
 ```
-| Table Name | Column       | Constraint Name                          | Foreign Constraint Definition                                                                                                                                                        |
-| ---------- | ------------ | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Vocabulary | userId       | FK_Vocabulary_userId_User_id             | ALTER TABLE "Vocabulary" ADD CONSTRAINT "FK_Vocabulary_userId_User_id" FOREIGN KEY ("userId") REFERENCES "User" ("id") ON DELETE NO ACTION ON UPDATE NO ACTION                       |
-| Definition | vocabularyId | FK_Definition_vocabularyId_Vocabulary_id | ALTER TABLE "Definition" ADD CONSTRAINT "FK_Definition_vocabularyId_Vocabulary_id" FOREIGN KEY ("vocabularyId") REFERENCES "Vocabulary" ("id") ON DELETE CASCADE ON UPDATE NO ACTION |
+| Table Name | Column       | Constraint Name                          | Foreign Constraint Definition  |
+| ---------- | ------------ | ---------------------------------------- | ------------------------------ |
+| Vocabulary | userId       | FK_Vocabulary_userId_User_id             | REFERENCES "User" ("id")       |
+| Definition | vocabularyId | FK_Definition_vocabularyId_Vocabulary_id | REFERENCES "Vocabulary" ("id") |
 ```
