@@ -32,12 +32,11 @@
 ```
 | Table Name | Index Name                | Index Definition                                                                                    |
 | ---------- | ------------------------- | --------------------------------------------------------------------------------------------------- |
-| Definition | PK_Definition_id          | CREATE UNIQUE INDEX "PK_Definition_id" ON public."Definition" USING btree (id)                      |
-| Migration  | PK_Migration_id           | CREATE UNIQUE INDEX "PK_Migration_id" ON public."Migration" USING btree (id)                        |
 | User       | PK_User_id                | CREATE UNIQUE INDEX "PK_User_id" ON public."User" USING btree (id)                                  |
-| Vocabulary | PK_Vocabulary_id          | CREATE UNIQUE INDEX "PK_Vocabulary_id" ON public."Vocabulary" USING btree (id)                      |
 | User       | UQ_User_email             | CREATE UNIQUE INDEX "UQ_User_email" ON public."User" USING btree (email)                            |
+| Vocabulary | PK_Vocabulary_id          | CREATE UNIQUE INDEX "PK_Vocabulary_id" ON public."Vocabulary" USING btree (id)                      |
 | Vocabulary | UQ_Vocabulary_word_userId | CREATE UNIQUE INDEX "UQ_Vocabulary_word_userId" ON public."Vocabulary" USING btree (word, "userId") |
+| Definition | PK_Definition_id          | CREATE UNIQUE INDEX "PK_Definition_id" ON public."Definition" USING btree (id)                      |
 ```
 
 ## Foreign Key
