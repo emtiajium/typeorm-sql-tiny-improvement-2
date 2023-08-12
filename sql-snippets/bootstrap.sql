@@ -28,12 +28,12 @@ $$
         randomWord         VARCHAR;
         latestVocabularyId UUID;
         latestUserId       UUID;
-        totalUsers         INT4;
+        totalUser          INT4;
         totalVocabPerUser  INT4;
         userIds            UUID[];
 
     BEGIN
-        totalUsers := 50;
+        totalUser := 50;
         userIds := '{}';
         userIds := ARRAY_APPEND(userIds, CURRENT_SETTING('my.userId')::UUID);
 
@@ -41,7 +41,7 @@ $$
         VALUES (CURRENT_SETTING('my.userId')::UUID, 'ehasan+1@firecrackervocabulary.com')
         ON CONFLICT (email) DO NOTHING;
 
-        FOR i IN 2..totalUsers
+        FOR i IN 2..totalUser
             LOOP
                 INSERT INTO "User" (email)
                 VALUES (CONCAT('ehasan+', i::VARCHAR, '@firecrackervocabulary.com'))
@@ -51,7 +51,7 @@ $$
 
         totalVocabPerUser := 5000;
 
-        FOR i IN 1..totalUsers
+        FOR i IN 1..totalUser
             LOOP
                 FOR j IN 1..totalVocabPerUser
                     LOOP
