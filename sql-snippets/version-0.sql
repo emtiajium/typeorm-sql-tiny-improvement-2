@@ -23,17 +23,17 @@ FROM "Vocabulary" "vocabulary"
          LEFT JOIN "Definition" "definition" ON "definition"."vocabularyId" = "vocabulary"."id"
 WHERE ("vocabulary"."userId" = '41f89c90-7029-46a4-8211-5f8c6e527a2d')
   AND ("vocabulary"."id" IN
-       ('41f89c90-7029-46a4-8211-5f8c6e527a2d', '240881de-1458-48af-9088-708649c02026',
-        '9d220c0e-748d-4ac2-b2c9-7a609083bdc3', 'b2a69d8c-c91a-44e1-9ae7-241dfeaba61a',
-        '95694546-1961-4bd6-ba6b-594a53fc9d9b', '5883a68e-9860-4c00-b732-c23044895d8f',
-        '2fb1728b-85a8-4244-aaf6-9ca5e4263ccb', '2e36c1ef-2a49-4adb-bec1-b8cd2acb0c63',
-        '68193792-356e-437e-abfc-c8dae0b948c9', '6a2bc3e6-d83a-4f0e-a542-1f7dd0a67dde',
-        '0126e08f-e5fe-4c7c-a949-95177138e73e', 'f694e6e4-58b2-408e-a1bc-452183468b50',
-        '16b42ff8-a5c8-41d4-bae1-32bd27edca17', '02a0d5aa-a590-4f82-890f-41bbe9964615',
-        '28fe5efb-fb40-472f-bd1a-33bad93a1a0a', '81ac7e0d-cc49-4232-9a40-dc0fb0bdacc6',
-        '4b81849e-a79f-40cc-a52a-b7695b123fe4', 'b94d6820-6f18-43ea-8e73-43fb17cec107',
-        '0b0a681c-8a95-44b5-bbb4-ae272ab2fa56', '88910fc7-c856-4fa6-896f-e669ab4c3680',
-        '46691da5-278e-4e1a-9729-f0131ce347c1'))
+       ('41f89c90-7029-46a4-8211-5f8c6e527a2d', 'b19457a9-03fb-4c3b-b649-83001b6b9616',
+        '17d84794-88a0-4e62-9f1c-88dea1fe8148', '9381945a-14d5-458b-b283-870ba3fa2057',
+        'c00d27cb-7ad1-4fd4-9641-73d3484f3741', '34e8fc07-dec6-4dc8-b461-ed412a5f1cc8',
+        'c5a52ddf-328f-4f1f-8c19-e38bc5d74ce1', '70de43d8-dbf2-45a4-86f1-1c4a0dc07512',
+        '9150aff2-27b0-499e-82de-7a15373f35b0', '25aa3d73-5e50-410a-b16a-522246b54982',
+        '3bf46a90-6982-46ac-9414-a5b3d36e9340', '05c26854-bfe2-48b3-ae2b-c3a76e26a473',
+        '40808019-f2c1-4857-8bab-a1820cfb974f', '5cb2e93d-c64c-407c-bfd2-5b765f630298',
+        '0fdf440c-37cd-46c3-a305-bd3b8937c377', '3fd8baf6-7e5e-4008-a8ef-81e30fcb6b0b',
+        '9501f02f-b77c-4abc-b6ef-fe1a44a575f3', 'cf6c5111-9077-4c9f-9d1b-07eeb44a7160',
+        '83c4e918-b14e-4848-ac16-e6e88fa6d774', 'ae156eb4-5a94-431a-8c1f-6b384d062e3b',
+        'b44b3033-1b54-4d3f-93a0-c73477dddf68'))
 ORDER BY "vocabulary_word" DESC;
 
 -- query 3
