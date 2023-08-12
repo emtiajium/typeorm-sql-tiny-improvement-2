@@ -21,4 +21,5 @@ services:
 
 volumes:
     query-comparison-postgres-data:
+        name: query-comparison-postgres-data
         driver: local
