@@ -22,32 +22,52 @@ $$;
 -- insert
 SET SESSION my.userId = '41f89c90-7029-46a4-8211-5f8c6e527a2d';
 
-INSERT INTO "User" (id, email)
-VALUES (CURRENT_SETTING('my.userId')::UUID, 'ehasan@firecrackervocabulary.com')
-ON CONFLICT (email) DO NOTHING;
-
 DO
 $$
     DECLARE
         randomWord         VARCHAR;
         latestVocabularyId UUID;
-        totalVocabs        INT4;
-    BEGIN
-        totalVocabs := 5000;
-        FOR i IN 1..totalVocabs
-            LOOP
-                randomWord :=
-                        CONCAT("getRandomString"(MOD(i, 5) + 1), LPAD(i::VARCHAR, LENGTH(totalVocabs::VARCHAR), '0'));
-                INSERT INTO "Vocabulary" (word, "userId")
-                VALUES (randomWord, CURRENT_SETTING('my.userId')::UUID)
-                RETURNING id
-                    INTO latestVocabularyId;
+        latestUserId       UUID;
+        totalUsers         INT4;
+        totalVocabPerUser  INT4;
+        userIds            UUID[];
 
-                FOR j IN 1..5
+    BEGIN
+        totalUsers := 50;
+        userIds := '{}';
+        userIds := ARRAY_APPEND(userIds, CURRENT_SETTING('my.userId')::UUID);
+
+        INSERT INTO "User" (id, email)
+        VALUES (CURRENT_SETTING('my.userId')::UUID, 'ehasan+1@firecrackervocabulary.com')
+        ON CONFLICT (email) DO NOTHING;
+
+        FOR i IN 2..totalUsers
+            LOOP
+                INSERT INTO "User" (email)
+                VALUES (CONCAT('ehasan+', i::VARCHAR, '@firecrackervocabulary.com'))
+                RETURNING id INTO latestUserId;
+                userIds := ARRAY_APPEND(userIds, latestUserId);
+            END LOOP;
+
+        totalVocabPerUser := 5000;
+
+        FOR i IN 1..totalUsers
+            LOOP
+                FOR j IN 1..totalVocabPerUser
                     LOOP
+                        randomWord :=
+                                CONCAT("getRandomString"(MOD(j, 5) + 1),
+                                       LPAD(j::VARCHAR, LENGTH(totalVocabPerUser::VARCHAR), '0'));
+                        INSERT INTO "Vocabulary" (word, "userId")
+                        VALUES (randomWord, userIds[i])
+                        RETURNING id
+                            INTO latestVocabularyId;
+
                         INSERT INTO "Definition" (meaning, "vocabularyId")
-                        VALUES (CONCAT('Meaning', j), latestVocabularyId);
+                        VALUES ('Meaning1', latestVocabularyId),
+                               ('Meaning2', latestVocabularyId);
                     END LOOP;
             END LOOP;
+
     END
 $$;
