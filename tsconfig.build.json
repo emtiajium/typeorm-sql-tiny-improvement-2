@@ -1,13 +1,4 @@
 {
     "extends": "./tsconfig.json",
-    "exclude": [
-        "node_modules",
-        "test",
-        "dist",
-        "migrations",
-        "set-git-config.bash",
-        "sql-snippets",
-        "db-dump",
-        "scripts"
-    ]
+    "exclude": ["node_modules", "test", "dist", "migrations", "sql-snippets", "db-dump", "scripts"]
 }
