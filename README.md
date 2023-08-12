@@ -50,7 +50,7 @@ TO BE ADDED
 
 ## Remove backing services
 
-➜ `npm run clean:docker-container`
+➜ `npm run clean:docker-containers`
 
 ## Change Logs
 
