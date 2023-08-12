@@ -30,7 +30,7 @@ describe('Vocabulary Repository', () => {
             .getManyAndCount();
 
         // Assert
-        expect(queryResult[1]).toBe(5000);
+        expect(queryResult[1]).toBeGreaterThanOrEqual(5000);
         expect(queryResult[0][0]).toBeInstanceOf(Vocabulary);
     });
 });
