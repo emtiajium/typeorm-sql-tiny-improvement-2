@@ -20,7 +20,7 @@ TO BE ADDED
 
 ➜ `npm install`
 
-###### Run the backing services
+###### Run backing services
 
 ➜ `docker-compose up -d`
 
@@ -36,7 +36,7 @@ TO BE ADDED
 
 ➜ `bash scripts/db-restore.bash`
 
-###### Run the tests
+###### Run tests
 
 ➜ `npm run test`
 
@@ -47,6 +47,10 @@ TO BE ADDED
 ## Generate new migration script after changing the entity class(es)
 
 ➜ `npm run migration:generate migrations/<file-name>`
+
+## Remove backing services
+
+➜ `npm run clean:docker-container`
 
 ## Change Logs
 
