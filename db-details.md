@@ -27,7 +27,7 @@
 | vocabularyId | uuid              | not null |                    |
 ```
 
-## Index Keys
+## Index Key
 
 ```
 | Table Name | Index Name                | Index Definition                                                                                    |
