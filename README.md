@@ -2,7 +2,7 @@
 
 # What is this repository for?
 
-TO BE ADDED
+[Demystifying ORM Queries: The Search for Optimized Queries](https://dev.to/emtiajium/demystifying-orm-queries-the-search-for-optimized-queries-2lbk)
 
 # How to Run
 
