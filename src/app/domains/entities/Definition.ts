@@ -9,6 +9,9 @@ export default class Definition {
     @Column({ type: 'varchar', nullable: false })
     meaning: string;
 
+    @Column({ type: 'jsonb', nullable: true, default: '[]' })
+    examples: string[];
+
     @ManyToOne(() => Vocabulary, (vocabulary) => vocabulary.definitions, {
         eager: false,
         cascade: false,
